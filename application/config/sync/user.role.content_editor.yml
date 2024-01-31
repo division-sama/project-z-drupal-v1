@@ -1,0 +1,56 @@
+uuid: c7a30ccb-a25f-4926-9fe4-94c3dce0b390
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.article
+    - node.type.page
+    - node.type.products
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - filter
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+_core:
+  default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create page content'
+  - 'create products content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete own article content'
+  - 'delete own files'
+  - 'delete own page content'
+  - 'delete own products content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit own products content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert products revisions'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view user email addresses'

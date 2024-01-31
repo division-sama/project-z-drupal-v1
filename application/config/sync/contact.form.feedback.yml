@@ -1,0 +1,14 @@
+uuid: 12cbd80f-d754-4ed3-9b88-cbeef5a7f5cd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - blog.123@abc.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

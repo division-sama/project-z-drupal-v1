@@ -1,0 +1,11 @@
+name: 'Custom REST API'
+type: module
+description: 'Provides a custom REST API for retrieving nodes created by a specific UID.'
+core_version_requirement: ^10
+package: Custom
+
+dependencies:
+  - drupal:rest
+
+core: 10.x
+version: "1.0"

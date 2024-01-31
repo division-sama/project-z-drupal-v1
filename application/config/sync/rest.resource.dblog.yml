@@ -1,0 +1,18 @@
+uuid: 6508a398-1e88-4647-a15d-ce697b54d85e
+langcode: en
+status: true
+dependencies:
+  module:
+    - dblog
+    - serialization
+    - simple_oauth
+id: dblog
+plugin_id: dblog
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

@@ -1,0 +1,23 @@
+uuid: 20b0795f-fb67-4c13-b753-7276d95b0bf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stocks
+    - node.type.products
+id: node.products.field_stocks
+field_name: field_stocks
+entity_type: node
+bundle: products
+label: 'Product Stocks'
+description: 'This field holds the amount of products'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100000
+  prefix: ''
+  suffix: ''
+field_type: integer

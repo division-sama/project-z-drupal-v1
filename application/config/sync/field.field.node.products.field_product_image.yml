@@ -1,0 +1,23 @@
+uuid: c3949bd5-acd7-40a9-8bab-8556391b7e58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_image
+    - node.type.products
+  module:
+    - link
+id: node.products.field_product_image
+field_name: field_product_image
+entity_type: node
+bundle: products
+label: 'Product Image'
+description: 'Holds the Image of products'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,18 @@
+uuid: 2bd41c2a-c002-46ca-8bf7-8830d5004c12
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_api
+    - serialization
+    - user
+id: custom_rest_api
+plugin_id: custom_rest_api
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

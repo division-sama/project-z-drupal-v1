@@ -1,0 +1,49 @@
+version: '3'
+services: 
+  web: 
+    container_name: web 
+    build: 
+      context: . 
+      dockerfile: Dockerfile 
+    ports: 
+      - "8080:80" 
+    volumes: 
+      - ./application:/var/www/html/
+      - .:/application
+    links: 
+      - mysqldb 
+    depends_on: 
+      - mysqldb 
+    environment: 
+      - DRUPAL_DB_HOST=mysqldb 
+      - DRUPAL_DB_NAME=blog 
+      - DRUPAL_DB_USER=root 
+      - DRUPAL_DB_PASS=root 
+      - DRUPAL_DB_DRIVER=mysql 
+      - DRUPAL_TRUSTED_HOST_PATTERNS=localhost
+  myadmin: 
+    image: phpmyadmin/phpmyadmin 
+    container_name: phpmyadmin 
+    ports: 
+      - "8081:80" 
+    environment: 
+      - PMA_ARBITRARY=1 
+      - PMA_HOST=mysqldb 
+      - UPLOAD_LIMIT=2000M 
+    links: 
+      - mysqldb 
+    restart: always 
+    depends_on: 
+      - mysqldb 
+  mysqldb: 
+    container_name: mysql 
+    image: mysql:8.0 
+    restart: always 
+    command: --default-authentication-plugin=mysql_native_password --max_allowed_packet=1073741824 
+    environment: 
+      - MYSQL_DATABASE=blog 
+      - MYSQL_ROOT_PASSWORD=root   
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    volumes: 
+      - ./db:/var/lib/mysql
+

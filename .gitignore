@@ -1,0 +1,5 @@
+application/core/
+application/modules/contrib/
+application/vendor/
+db/
+application/sites/default/files

@@ -1,0 +1,19 @@
+uuid: 2a72023d-5beb-41fd-89e3-220ce8bed9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_title
+    - node.type.products
+id: node.products.field_product_title
+field_name: field_product_title
+entity_type: node
+bundle: products
+label: 'Product Title'
+description: 'This field holds the title of product.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
