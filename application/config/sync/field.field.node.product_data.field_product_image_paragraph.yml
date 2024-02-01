@@ -1,0 +1,31 @@
+uuid: b4849905-65c9-49ee-8752-3216403800ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_image_paragraph
+    - node.type.product_data
+    - paragraphs.paragraphs_type.product_images
+  module:
+    - entity_reference_revisions
+id: node.product_data.field_product_image_paragraph
+field_name: field_product_image_paragraph
+entity_type: node
+bundle: product_data
+label: 'Product Image Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      product_images: product_images
+    negate: 0
+    target_bundles_drag_drop:
+      product_images:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

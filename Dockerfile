@@ -70,3 +70,7 @@ RUN { \
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/
 
 # https://www.drupal.org/node/3060/release
+
+#Set php memory limit for local dev
+RUN cd /usr/local/etc/php/conf.d/ && \
+ echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini
