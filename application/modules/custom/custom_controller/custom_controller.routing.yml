@@ -1,0 +1,7 @@
+example.my_page:
+  path: '/formdata'
+  defaults:
+    _controller: '\Drupal\custom_controller\Controller\ExampleController::myPage'
+    _title: 'My first page in D8'
+  requirements:
+    _permission: 'access content'
